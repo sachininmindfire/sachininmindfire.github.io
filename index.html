@@ -3,113 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online tool to convert SQL scripts to POCO classes Or T4 Template classes. Supports multiple programming languages including C#, Java, TypeScript and more.">
-    <meta name="keywords" content="SQL to POCO, POCO generator, SQL converter, C# classes, Java classes, TypeScript interfaces, T4 templates">
-    <meta name="author" content="SQL POCO Generator">
-    <meta name="robots" content="index, follow">
-    <title>SQL to POCO Converter - Generate Classes from SQL Scripts</title>
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SQL to POCO Converter - Generate Classes from SQL Scripts">
-    <meta property="og:description" content="Free online tool to convert SQL scripts to POCO classes. Supports multiple programming languages.">
-    <meta property="og:image" content="https://sql-poco.github.io/images/og-image.png">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SQL to POCO Converter">
-    <meta name="twitter:description" content="Convert SQL scripts to POCO classes instantly">
-    <meta name="twitter:image" content="https://sql-poco.github.io/images/twitter-image.png">
-
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/themes/prism.min.css">
+    <title>Sachin's Technical Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">SQL to POCO classes generator</div>            
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#docs">Documentation</a></li>
-                <li><a href="https://github.com/yourusername/sql-poco-frontend" target="_blank" rel="noopener">GitHub</a></li>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="/" class="nav-link">Sachin's Tech Blog</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/articles" class="nav-link">Articles</a></li>
+                <li><a href="/tips" class="nav-link">Tips</a></li>
+                <li><a href="/tools" class="nav-link">Tools</a></li>
+                <li><a href="/terms" class="nav-link">Terms</a></li>
             </ul>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section class="converter">
-            <div class="input-section">
-                <h2>Input SQL Script</h2>
-                <div class="code-input-wrapper">
-                    <textarea id="sqlInput" class="code-input" placeholder="-- Paste your SQL script here
-CREATE TABLE Users (
-    UserId INT PRIMARY KEY,
-    Username VARCHAR(50) NOT NULL,
-    Email VARCHAR(100) NOT NULL
-);"></textarea>
+    <main class="main-content">
+        <section class="hero">
+            <div class="bio-container">
+                <h1>Welcome to My Technical Blog</h1>
+                <p>I'm Sachin, a software developer passionate about creating efficient solutions and sharing knowledge.</p>
+                <div class="featured-tool">
+                    <h3>Featured Tool</h3>
+                    <a href="https://sachininmindfire.github.io/sql-poco-app/" class="tool-link">
+                        <i class="fas fa-tools"></i>
+                        SQL POCO Generator
+                    </a>
+                    <p>Generate POCO classes from SQL Server tables with ease!</p>
                 </div>
-                <div class="controls">
-                    <select id="languageSelect" class="language-select">
-                        <option value="csharp">C#</option>
-                        <option value="java">Java</option>
-                        <option value="typescript">TypeScript</option>
-                        <option value="python">Python</option>
-                    </select>
-                    <button id="convertBtn" class="convert-btn">Generate POCO</button>
-                </div>
-            </div>
-
-            <div class="output-section">
-                <h2>Generated Code</h2>
-                <div class="code-output-wrapper">
-                    <pre><code id="outputCode" class="language-csharp"></code></pre>
-                </div>
-                <button id="copyBtn" class="copy-btn">Copy Code</button>
             </div>
         </section>
 
-        <section class="features">
-            <h2>Features</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>Multi-Language Support</h3>
-                    <p>Generate code in C#, Java, TypeScript, and more</p>
+        <section class="latest-content">
+            <h2>Latest Content</h2>
+            <div class="content-grid">
+                <div class="content-section">
+                    <h3>Recent Articles</h3>
+                    <div class="content-cards" id="latest-articles">
+                        <!-- Content will be loaded via JavaScript -->
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <h3>Instant Conversion</h3>
-                    <p>Get your POCO classes in seconds</p>
+
+                <div class="content-section">
+                    <h3>Latest Tips</h3>
+                    <div class="content-cards" id="latest-tips">
+                        <!-- Content will be loaded via JavaScript -->
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <h3>Free to Use</h3>
-                    <p>No registration required</p>
+
+                <div class="content-section">
+                    <h3>New Tools</h3>
+                    <div class="content-cards" id="latest-tools">
+                        <!-- Content will be loaded via JavaScript -->
+                    </div>
                 </div>
-                <div class="feature-item">
-                    <h3>Clean Code</h3>
-                    <p>Generated code follows best practices</p>
+
+                <div class="content-section">
+                    <h3>Recent Terms</h3>
+                    <div class="content-cards" id="latest-terms">
+                        <!-- Content will be loaded via JavaScript -->
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-content">
-            <p>&copy; 2025 SQL to POCO Generator. All rights reserved.</p>
-            <ul>
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="https://github.com/sachininmindfire" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/tips">Tips</a></li>
+                    <li><a href="/tools">Tools</a></li>
+                    <li><a href="/terms">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sachin's Technical Blog. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/components/prism-sql.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/components/prism-csharp.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/components/prism-java.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/components/prism-typescript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.29.0/components/prism-python.min.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
