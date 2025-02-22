@@ -1,7 +1,7 @@
 // Environment configuration
 const config = {
     // Default to production API URL, can be overridden in development
-    API_BASE_URL: 'https://sql-poco-api.azurewebsites.net' // Replace with your production API URL
+    API_BASE_URL: 'https://sql-poco-dffpbpdncbdmd0f3.centralus-01.azurewebsites.net/' // Replace with your production API URL
 };
 
 // For local development, override with localhost if needed
