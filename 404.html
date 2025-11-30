@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        try {
+          var path = window.location.pathname + window.location.search + window.location.hash;
+          // If there's no hash already, redirect to index with hash preserving the path
+          if (!window.location.hash) {
+            window.location.replace('/#' + path);
+          } else {
+            // If hash already present, just redirect to root so Angular can handle it
+            window.location.replace('/' + window.location.hash);
+          }
+        } catch (e) {
+          // On error, fallback to root
+          window.location.replace('/');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
